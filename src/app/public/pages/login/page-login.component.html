@@ -1,0 +1,14 @@
+<h1>Login Page</h1>
+<hr class="my-4">
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+  <div>
+    <input type="email" id="email" formControlName="email" placeholder="user@domain.tld">
+  </div>
+  <div>
+    <input type="password" id="password" formControlName="password" placeholder="password">
+  </div>
+  <button class="px-4 py-2 mr-4 bg-slate-100 rounded" type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
+<hr class="my-4">
+<button class="px-4 py-2 mr-4 bg-slate-100 rounded" (click)="onLogout()">Logout</button>
+

@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
 
+## Prepare SSL
+
+Install `mkcert` from https://github.com/FiloSottile/mkcert
+
+Create Certificate files
+
+```bash
+mkdir -p cert # if you don't have the src/cert directory
+mkcert -install
+mkcert -key-file ./cert/key.pem -cert-file ./cert/cert.pem localhost
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
